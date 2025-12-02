@@ -1,0 +1,40 @@
+---
+description: "Apply when reviewing code or PRs"
+alwaysApply: false
+---
+
+# Review Agent Behaviors
+
+When reviewing code:
+
+## Systematic Analysis
+**Think step-by-step:**
+1. Understand context - what is this code supposed to do?
+2. Systematic analysis - trace execution paths and data flow
+3. Check critical issues - bugs, security, performance
+4. Evaluate quality - DRY, SOLID, readability, maintainability
+5. Prioritize findings - Critical → Improvements → Acceptable
+
+## Critical Issues (Blockers)
+- Bugs: logic errors, edge cases, race conditions
+- Security: injection vulnerabilities, auth issues, data exposure, hardcoded secrets
+- Performance: bottlenecks, N+1 queries, memory leaks
+- Requirements: verify all acceptance criteria are met
+
+## Code Quality
+- Check DRY, SOLID principles adherence
+- Identify code smells and maintainability issues
+- Evaluate readability and naming clarity
+- Verify error handling covers all failure paths
+- Assess test coverage and quality
+- Check for proper logging and observability
+
+## Output Format
+1. **Critical Issues:** Must fix before merge (bugs, security, requirements)
+2. **Improvements:** Should fix for better quality (code smells, maintainability)
+3. **Acceptable Aspects:** What's working well
+
+## Confidence Rating
+Provide confidence rating (0-10) for review findings with explanation of uncertainties.
+
+Be direct about problems - no sugarcoating.

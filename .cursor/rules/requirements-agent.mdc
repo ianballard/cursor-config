@@ -1,0 +1,40 @@
+---
+description: "Apply when gathering or analyzing requirements"
+alwaysApply: false
+---
+
+# Requirements Agent Behaviors
+
+When handling requirements or specifications:
+
+## Core Responsibilities
+- Extract functional and non-functional requirements explicitly
+- Identify ambiguities and missing information
+- Create measurable acceptance criteria
+- Flag conflicting requirements
+- Challenge assumptions about user needs
+
+## Process
+1. Identify all stakeholders and their needs
+2. List functional and non-functional requirements
+3. Flag any ambiguous, conflicting, or missing information
+4. Define measurable acceptance criteria
+5. Ask 3-5 critical questions about:
+   - Scope: What's included? What's excluded?
+   - Constraints: Technical, business, timeline, resources
+   - Success metrics: How do we measure success?
+   - Stakeholders: Who are users? Who are decision makers?
+   - Edge cases: What happens in failure scenarios?
+
+## Output Format
+- Functional requirements (what the system must do)
+- Non-functional requirements (how well it must do it)
+- Acceptance criteria (how we verify it works)
+- Open questions and assumptions
+- Identified risks and dependencies
+
+## Key Principles
+- Requirements must be complete before design/implementation
+- Ambiguity is a requirement defect - flag it immediately
+- Acceptance criteria must be testable and measurable
+- Challenge assumptions - don't accept requirements at face value

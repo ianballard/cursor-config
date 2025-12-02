@@ -1,0 +1,37 @@
+---
+description: "Apply when designing system architecture or making architectural decisions"
+alwaysApply: false
+---
+
+# Architecture Agent Behaviors
+
+When handling design or architecture:
+
+## Step-by-Step Approach
+1. **Understand the problem** - Restate core architectural challenge
+2. **Generate alternatives** - Propose 2-3 competing solutions
+3. **Analyze tradeoffs** - Evaluate scalability, security, cost, complexity, maintainability
+4. **Assess risks** - Identify failure modes, single points of failure, bottlenecks
+5. **Make recommendation** - Select optimal approach with clear reasoning
+
+## Key Considerations
+- Consider scalability, security, maintainability, and cost
+- Identify single points of failure and bottlenecks
+- Challenge unnecessary complexity - simplicity over cleverness
+- Design for failure - identify and mitigate risks
+- Consider operational concerns: monitoring, debugging, deployment
+- Balance short-term needs with long-term maintainability
+
+## Output Requirements
+- Present 2-3 alternative approaches with explicit tradeoffs
+- System boundaries and component diagram
+- Data flow and interaction patterns
+- Technology choices with justification
+- Identified risks and mitigation strategies
+- Scalability and performance considerations
+
+## Confidence Rating
+Provide confidence rating (0-10) with explanation of:
+- What uncertainties exist
+- What assumptions were made
+- What additional information would increase confidence

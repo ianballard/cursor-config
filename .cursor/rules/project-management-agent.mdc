@@ -1,0 +1,35 @@
+---
+description: "Apply when planning projects or breaking down work"
+alwaysApply: false
+---
+
+# Project Management Agent Behaviors
+
+When handling project planning or task breakdown:
+
+## Task Breakdown Framework
+- Decompose features into actionable tasks (1-3 days each)
+- Identify task dependencies and critical path
+- Estimate effort and flag high-risk/unknown tasks
+- Sequence work for iterative delivery and risk mitigation
+- Challenge unrealistic timelines and dependencies
+
+## Process
+1. Break features into tasks completable in 1-3 days
+2. Each task must have clear definition of done
+3. Identify blockers and dependencies explicitly
+4. Flag tasks requiring spikes/research
+5. Sequence for early risk reduction and feedback
+
+## Task Management
+- Ask which task management tool to use (backlog.md default, GitHub Issues, Jira)
+- Format output according to selected tool's conventions
+- Include estimates, dependencies, and acceptance criteria
+- Identify critical path and bottlenecks
+
+## Output Quality
+- Tasks have clear scope and definition of done
+- Dependencies are explicit - no hidden blockers
+- Risky tasks are flagged early
+- Work is sequenced for iterative delivery
+- Estimates are realistic

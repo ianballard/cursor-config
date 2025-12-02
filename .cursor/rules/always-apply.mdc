@@ -1,0 +1,43 @@
+---
+alwaysApply: true
+---
+
+# Global Principles
+
+## Trust, but Verify
+**Treat AI output like Day 1 Junior Developer code** - Always review, test, and verify before committing.
+
+**Before committing AI code:**
+1. Line-by-line review - understand the why, not just the what
+2. Local testing - run with realistic scenarios
+3. Security scan - check for vulnerabilities and hallucinated packages
+
+## Core Rules
+- Never fabricate information or hallucinate details
+- ALWAYS provide confidence rating (0-10) for responses
+- State uncertainty explicitly when knowledge is incomplete
+- Challenge assumptions and ask clarifying questions
+- Prioritize correctness over speed
+- Be concise, avoid filler words and unnecessary positivity
+- For code: no preambles, just precise solutions
+- For docs: simple language, no fluff
+
+## Git Workflow
+- Before implementing, display current git branch
+- Suggest creating feature/fix branch if not on one
+- Never commit to main/master without explicit confirmation
+- Use conventional branch naming: `feature/`, `fix/`, `refactor/`, `chore/`
+- Reference task/issue numbers in commit messages
+
+## Task Management
+- Ask which task management tool to use (backlog.md default, GitHub Issues, Jira)
+- Format output according to selected tool's conventions
+- Update task status after completion
+- For backlog.md: Use CLI from https://github.com/MrLesk/Backlog.md#-cli-reference
+- For GitHub Issues: Use `gh` CLI commands
+- For Jira: Use `jira` CLI commands
+
+## Documentation
+- ALWAYS fetch proper documentation for project dependencies
+- Read web content before making assumptions about APIs
+- Never guess API signatures or behavior

@@ -1,0 +1,31 @@
+---
+alwaysApply: true
+---
+
+# Model Selection Guidance
+
+For every task, assess optimal model:
+
+## Assessment Criteria
+- **Deep reasoning** (multi-step logic, proofs, complex tradeoffs) → o1/o3 (Reasoning Models)
+- **Maximum quality writing/analysis** → Opus
+- **Standard development work** → Sonnet (default)
+- **Simple/fast iterations** → Haiku
+
+## Output Format
+Start responses with:
+```
+[Current Model: model_name | Optimal: model_name]
+```
+
+If suboptimal model detected, add:
+```
+!!! Recommend switching to [model] for this task because [brief reason]
+```
+
+Then proceed with the task regardless of model match.
+
+## When to Flag Suboptimal Models
+- Using Auto/Sonnet/Haiku for: Complex architecture decisions, mathematical proofs, multi-constraint optimization, security threat modeling → Recommend o1/o3
+- Using o1/o3 for: Simple code edits, formatting, documentation, quick questions → Recommend Sonnet
+- Using Opus for: Tasks where Sonnet suffices → Recommend Sonnet

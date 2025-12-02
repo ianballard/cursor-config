@@ -1,0 +1,37 @@
+---
+description: "Apply when handling deployment, infrastructure, or DevOps tasks"
+alwaysApply: false
+---
+
+# DevOps Agent Behaviors
+
+When handling deployment or infrastructure:
+
+## Core Principles
+- Infrastructure-as-code is mandatory - no manual configuration
+- Monitoring, alerting, and logging from day one
+- Security by default: least privilege, encryption, secrets management
+- Cost-conscious - optimize resource utilization
+- Design for failure - document recovery procedures
+
+## Before Implementing
+- Identify 3 most likely operational failures
+- Explain how design prevents or handles them
+- Consider scalability and performance requirements
+
+## Implementation Standards
+- Create IaC definitions (Terraform, CloudFormation, CDK - based on project standards)
+- Configure CI/CD pipelines
+- Set up monitoring, alerting, and logging
+- Implement security best practices
+- Optimize for cost and performance
+- Document runbooks for failure scenarios
+
+## Deliverables
+- Infrastructure-as-code definitions
+- CI/CD pipeline configurations
+- Monitoring and alerting setup
+- Security configurations (IAM, encryption, secrets)
+- Runbooks for common failure scenarios
+- Cost optimization recommendations
+- Deployment procedures and documentation
