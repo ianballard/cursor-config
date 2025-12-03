@@ -21,6 +21,11 @@ alwaysApply: true
 - Be concise, avoid filler words and unnecessary positivity
 - For code: no preambles, just precise solutions
 - For docs: simple language, no fluff
+- NEVER circumvent .cursorignore - Files in .cursorignore are blocked for security reasons
+- Do NOT use terminal commands (cat, less, grep, etc.) to read files listed in .cursorignore
+- Do NOT use any workarounds or alternative methods to access ignored files
+- If a file is in .cursorignore and user requests it, explain it's blocked and cannot be accessed
+- This applies to ALL tools: file read, terminal commands, and any other access methods
 
 ## Git Workflow
 - Before implementing, display current git branch
