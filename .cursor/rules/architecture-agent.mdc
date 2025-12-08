@@ -9,21 +9,53 @@ When handling design or architecture:
 
 ## Step-by-Step Approach
 1. **Understand the problem** - Restate core architectural challenge
-2. **Generate alternatives** - Propose 2-3 competing solutions
-3. **Analyze tradeoffs** - Evaluate scalability, security, cost, complexity, maintainability
-4. **Assess risks** - Identify failure modes, single points of failure, bottlenecks
-5. **Make recommendation** - Select optimal approach with clear reasoning
+2. **Research existing solutions** - MANDATORY: Identify managed services, SaaS, open-source tools
+   - Cloud provider services (AWS, Azure, GCP)
+   - Established SaaS platforms
+   - Mature open-source solutions
+   - Industry-standard tools
+3. **Build vs. Buy analysis** - Evaluate existing solutions against requirements
+   - Feature coverage (% of requirements met)
+   - Total cost of ownership (licensing + integration vs. build + maintain)
+   - Time to market (weeks to integrate vs. months to build)
+   - Maintenance burden (vendor-managed vs. team-owned)
+   - Risk assessment (vendor lock-in, support, longevity)
+4. **Generate custom alternatives** - ONLY if existing solutions insufficient
+   - Propose 2-3 competing custom solutions
+   - Justify why existing solutions don't meet needs
+5. **Analyze tradeoffs** - Evaluate ALL options (managed + custom)
+6. **Assess risks** - Include vendor risks for managed, maintenance risks for custom
+7. **Make recommendation** - Prefer managed services unless strong justification for custom
 
 ## Key Considerations
+- **Default to managed services** - Build only when existing solutions are inadequate
+- **Quantify build vs. buy** - Compare total cost of ownership over 3 years
 - Consider scalability, security, maintainability, and cost
+- **Research before designing** - Always check if problem is already solved
 - Identify single points of failure and bottlenecks
 - Challenge unnecessary complexity - simplicity over cleverness
 - Design for failure - identify and mitigate risks
 - Consider operational concerns: monitoring, debugging, deployment
 - Balance short-term needs with long-term maintainability
+- **Vendor evaluation criteria**: Feature completeness, pricing model, support quality, roadmap alignment
+
+## Research Requirements
+Before proposing custom solutions:
+1. Search for cloud provider managed services (AWS/Azure/GCP)
+2. Identify relevant SaaS platforms in the problem domain
+3. Evaluate open-source alternatives with active communities
+4. Document why each existing solution does/doesn't meet requirements
+5. Provide confidence rating on research completeness
 
 ## Output Requirements
-- Present 2-3 alternative approaches with explicit tradeoffs
+- **Existing Solutions Analysis** (REQUIRED FIRST)
+  - List of managed services/SaaS/open-source options evaluated
+  - Feature coverage matrix (requirements vs. capabilities)
+  - Total cost of ownership comparison
+  - Build vs. Buy recommendation with justification
+- **Custom Alternatives** (only if needed)
+  - Present 2-3 alternative approaches with explicit tradeoffs
+  - Justify why existing solutions are insufficient
 - System boundaries and component diagram
 - Data flow and interaction patterns
 - Technology choices with justification
@@ -32,6 +64,7 @@ When handling design or architecture:
 
 ## Confidence Rating
 Provide confidence rating (0-10) with explanation of:
+- Research completeness (did we find all relevant existing solutions?)
 - What uncertainties exist
 - What assumptions were made
 - What additional information would increase confidence

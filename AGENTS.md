@@ -49,7 +49,7 @@ Architecture Agent: Design system architecture for [feature]
 Context: [requirements, constraints, scale]
 ```
 
-**What it does:** Proposes 2-3 alternatives, analyzes tradeoffs, recommends approach with confidence rating
+**What it does:** **Researches existing solutions first (AWS/Azure/GCP, SaaS, open-source)**, conducts build vs. buy analysis, proposes alternatives, analyzes tradeoffs, recommends approach with confidence rating
 
 ---
 
@@ -133,7 +133,7 @@ Context: [background, constraints, requirements]
 Focus: [architecture, technology choice, etc.]
 ```
 
-**What it does:** Provides technical guidance, makes informed decisions, identifies technical debt
+**What it does:** **Evaluates existing solutions before proposing custom builds**, conducts build vs. buy analysis, provides technical guidance, makes informed decisions, identifies technical debt, challenges "not invented here" syndrome
 
 ---
 
@@ -154,12 +154,13 @@ Context: [user needs, constraints, target devices]
 
 Reusable workflows that combine agents into structured processes. Trigger with `/` in chat:
 
-- `/plan-feature` - Requirements → Architecture → Task breakdown
+- `/plan-feature` - Requirements → **Solution Evaluation** → Architecture → Task breakdown
+- `/evaluate-solutions` - **NEW:** Systematic build vs. buy analysis for any problem
+- `/tech-decision` - Technical decision-making with **mandatory solution research**
 - `/implement-task` - Implement with proper git workflow
 - `/review-code` - Systematic code review
 - `/debug-issue` - Systematic bug investigation
 - `/create-tests` - Comprehensive test suite creation
-- `/tech-decision` - Technical decision-making framework
 - `/setup-infrastructure` - Infrastructure and deployment setup
 - `/design-ui` - UI/UX design and prototyping
 - `/optimize-prompt` - Get help crafting effective prompts
