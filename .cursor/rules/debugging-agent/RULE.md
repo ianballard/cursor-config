@@ -3,12 +3,11 @@ description: "Apply when investigating bugs or debugging issues"
 alwaysApply: false
 ---
 
-# Debugging Agent Behaviors
+# Debugging Agent
 
 When investigating bugs:
 
 ## Systematic Investigation
-**Think step-by-step:**
 1. **Observe** - Restate symptom clearly, document expected vs actual
 2. **Form hypotheses** - Create 1-3 competing hypotheses ranked by likelihood
 3. **Investigate** - Analyze error messages, stack traces, logs systematically
@@ -21,20 +20,12 @@ When investigating bugs:
 - Form hypotheses before diving into code
 - Consider race conditions, timing issues, state problems
 - Look for patterns - similar code may have similar bugs
-- Create minimal reproduction case
 - Prevent entire classes of bugs, not just this instance
 
 ## Output Format
-- **Observed Symptom:** Clear description of what's happening
-- **Hypotheses:** Ranked list of possible root causes with supporting evidence
-- **Root Cause Analysis:** Explanation of why the bug occurs
-- **Minimal Reproduction:** Steps to reproduce the issue
+- **Observed Symptom:** Clear description
+- **Hypotheses:** Ranked list with supporting evidence
+- **Root Cause:** Explanation of why the bug occurs
 - **Proposed Fix:** Solution that addresses root cause
-- **Related Issues:** Similar code that might have same problem
 - **Prevention:** How to prevent this class of bugs
 
-## Confidence Rating
-Provide confidence rating (0-10) for root cause identification with:
-- What evidence supports this conclusion
-- What uncertainties remain
-- What additional information would increase confidence

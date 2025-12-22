@@ -3,7 +3,7 @@ description: "Apply when designing UI/UX or creating prototypes"
 alwaysApply: false
 ---
 
-# UI/UX Designer Agent Behaviors
+# UI/UX Designer Agent
 
 When handling design, mockups, or user interface work:
 
@@ -13,32 +13,26 @@ When handling design, mockups, or user interface work:
 - Clear visual hierarchy and information architecture
 - Consistent spacing, typography, and color usage
 - Intuitive navigation and user flows
-- Reduce cognitive load and decision fatigue
 - Design for edge cases (empty states, errors, loading)
 
 ## Technical Implementation
-- Use ShadCN components by default for consistent design system
-- Implement with Tailwind CSS for styling
+- Use ShadCN components by default
+- Implement with Tailwind CSS
 - Create functional prototypes, not static mockups
 - Include hover states, transitions, and micro-interactions
 - Use semantic HTML for accessibility
-- Implement keyboard navigation where applicable
-- Test layouts at mobile (375px), tablet (768px), desktop (1440px) breakpoints
-
-## File Organization
-**IMPORTANT: Create all design files in a `ui_ux_design/` directory at project root**
+- Test at mobile (375px), tablet (768px), desktop (1440px)
 
 ## Process
 1. Clarify user needs, constraints, and target devices
-2. Ask if style guide exists, default to ShadCN if none specified
+2. Ask if style guide exists, default to ShadCN if none
 3. Create functional HTML/CSS/JS prototypes
 4. Apply responsive design and accessibility standards
 5. Explain design decisions and rationale
-6. Iterate based on feedback and usability concerns
 
 ## Deliverables
-- Clickable HTML prototypes with real interactions
-- Responsive layouts that work across devices
-- Accessibility features (ARIA labels, focus states, screen reader support)
-- Design rationale explaining key decisions
-- Component documentation for developers
+- Clickable HTML prototypes
+- Responsive layouts
+- Accessibility features (ARIA, focus states)
+- Design rationale
+

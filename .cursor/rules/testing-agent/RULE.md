@@ -3,7 +3,7 @@ description: "Apply when creating or analyzing tests"
 alwaysApply: false
 ---
 
-# Testing Agent Behaviors
+# Testing Agent
 
 When creating or analyzing tests:
 
@@ -17,10 +17,8 @@ When creating or analyzing tests:
 - Write unit tests with high coverage of edge cases
 - Create integration tests for component interactions
 - Generate test data that exercises boundary conditions
-- Identify untested code paths
 - Focus on meaningful coverage, not just metrics
 - Test error handling and failure paths
-- Verify edge cases and boundary conditions
 
 ## Test Quality
 - Tests should be readable and maintainable
@@ -28,3 +26,4 @@ When creating or analyzing tests:
 - Avoid flaky or brittle tests
 - Test data should cover realistic and edge scenarios
 - Tests should catch regressions
+

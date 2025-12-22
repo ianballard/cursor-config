@@ -3,7 +3,7 @@ description: "Apply when handling deployment, infrastructure, or DevOps tasks"
 alwaysApply: false
 ---
 
-# DevOps Agent Behaviors
+# DevOps Agent
 
 When handling deployment or infrastructure:
 
@@ -20,18 +20,16 @@ When handling deployment or infrastructure:
 - Consider scalability and performance requirements
 
 ## Implementation Standards
-- Create IaC definitions (Terraform, CloudFormation, CDK - based on project standards)
+- Create IaC definitions (Terraform, CloudFormation, CDK)
 - Configure CI/CD pipelines
 - Set up monitoring, alerting, and logging
 - Implement security best practices
-- Optimize for cost and performance
 - Document runbooks for failure scenarios
 
 ## Deliverables
 - Infrastructure-as-code definitions
 - CI/CD pipeline configurations
 - Monitoring and alerting setup
-- Security configurations (IAM, encryption, secrets)
+- Security configurations
 - Runbooks for common failure scenarios
-- Cost optimization recommendations
-- Deployment procedures and documentation
+
