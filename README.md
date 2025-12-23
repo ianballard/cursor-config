@@ -70,7 +70,7 @@ AGENTS.md                   # Global rules & quick reference for all agents
 ## Customization
 
 Modify rules in `.cursor/rules/` to match your team's workflow:
-- Update `always-apply/RULE.md` for global principles
+- Update `AGENTS.md` for global rules
 - Adjust agent-specific rules for your coding standards
 - Add project-specific rule folders (e.g., `react-patterns/RULE.md`)
 
