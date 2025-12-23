@@ -9,4 +9,4 @@ Systematic code review using Review Agent.
 /review full codebase for security vulnerabilities
 ```
 
-Applies `review-agent/RULE.md` rules automatically.
+Applies `review-agent.mdc` rules automatically.

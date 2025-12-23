@@ -8,4 +8,4 @@ Implement a task using Development Agent with git workflow.
 /build user profile page
 ```
 
-Applies `development-agent/RULE.md` rules automatically.
+Applies `development-agent.mdc` rules automatically.

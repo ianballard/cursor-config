@@ -8,4 +8,4 @@ Create tests or run existing test suite using Testing Agent.
 /test run and fix any failures
 ```
 
-Applies `testing-agent/RULE.md` rules automatically.
+Applies `testing-agent.mdc` rules automatically.
