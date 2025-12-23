@@ -14,7 +14,7 @@ A template for using specialized AI agents in Cursor IDE for different software 
 
 3. **Invoke an agent:**
    ```
-   /build task-001 user authentication
+   /plan task-001 user authentication
    ```
 
 See `AGENTS.md` for all available agents and usage examples.
