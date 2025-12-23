@@ -24,8 +24,6 @@ See `AGENTS.md` for all available agents and usage examples.
 ```
 .cursor/
   rules/                    # Agent behaviors (auto-applied by Cursor)
-    always-apply/
-      RULE.md               # Global principles + model selection
     architecture-agent/
       RULE.md               # System design + technical decisions
       templates/            # Architecture templates & examples
@@ -60,7 +58,7 @@ See `AGENTS.md` for all available agents and usage examples.
     build.md                # Implementation
     prompt-help.md          # Prompt optimization help
 
-AGENTS.md                   # Quick reference for all agents
+AGENTS.md                   # Global rules & quick reference for all agents
 ```
 
 ## How It Works
