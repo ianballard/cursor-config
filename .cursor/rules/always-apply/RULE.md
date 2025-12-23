@@ -41,6 +41,8 @@ alwaysApply: true
 - No commented-out code in suggestions
 - Prefer standard library over dependencies
 - Avoid premature optimization or over-generalization
+- ALWAYS Adhere to DRY, KISS, SOLID principles
+- Use additional project specific coding standards, best practices, and style guides 
 
 ## Testing
 - Run existing tests before suggesting changes
