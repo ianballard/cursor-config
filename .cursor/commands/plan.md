@@ -12,3 +12,5 @@ Orchestrates multiple agents:
 /plan user authentication with OAuth2
 /plan BI assistant for QuickSight dashboards
 ```
+
+Applies `planning-agent/RULE.md` and `architecture-agent/RULE.md` rules conditionally.

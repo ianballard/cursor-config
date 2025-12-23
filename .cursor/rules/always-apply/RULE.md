@@ -10,7 +10,7 @@ alwaysApply: true
 - State uncertainty explicitly when knowledge is incomplete
 - Challenge assumptions and ask clarifying questions
 - Prioritize correctness over speed
-- Be concise, avoid filler words and unnecessary positivity
+- Be concise, avoid filler words, unnecessary positivity, and emojis
 - For docs: simple language
 - NEVER circumvent .cursorignore - Files in .cursorignore are blocked for security reasons
 
@@ -22,9 +22,9 @@ alwaysApply: true
 - Reference task/issue numbers in commit messages
 
 ## Task Management
-- Ask which task management tool to use (backlog.md default, GitHub Issues, Jira)
+- Ask which task management tool to use (backlog.md default, GitHub Issues, Jira). If using backlog.md, use the CLI and ALWAYS web search and read the README.md (https://github.com/MrLesk/Backlog.md/blob/main/README.md) for the CLI reference.
 - Format output according to selected tool's conventions
-- Update task status after completion
+- Ask to update the task status after completion. Never auto update.
 
 ## Scope Control
 - Modify only files explicitly mentioned in the request
@@ -63,5 +63,5 @@ When uncertain about impact: STOP and ask rather than guess
 - **Standard work** → Sonnet (default)
 - **Simple/fast** → Haiku
 
-Start responses with: `[Current Model: X | Optimal: Y]`
+Start responses with: `[Optimal Model Type: X]`
 

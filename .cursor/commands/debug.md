@@ -10,4 +10,4 @@ Expected: redirect to dashboard
 Actual: error page
 ```
 
-Applies `debugging-agent.mdc` rules automatically.
+Applies `debugging-agent/RULE.md` rules automatically.

@@ -8,4 +8,4 @@ Create UI/UX designs and prototypes using Designer Agent.
 /design-ui dashboard for analytics
 ```
 
-Applies `designer-agent.mdc` rules automatically.
+Applies `designer-agent/RULE.md` rules automatically.
