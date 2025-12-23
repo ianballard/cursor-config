@@ -28,12 +28,17 @@ See `AGENTS.md` for all available agents and usage examples.
       RULE.md               # Global principles + model selection
     architecture-agent/
       RULE.md               # System design + technical decisions
+      templates/            # Architecture templates & examples
+      prompts/              # Reusable prompt templates
     planning-agent/
       RULE.md               # Requirements + task planning
     development-agent/
       RULE.md               # Code implementation
+      examples/             # Code examples & patterns
+      scripts/              # Helper scripts referenced by rules
     review-agent/
       RULE.md               # Code review
+      checklists/           # Review checklists
     testing-agent/
       RULE.md               # Test creation
     debugging-agent/
@@ -53,6 +58,7 @@ See `AGENTS.md` for all available agents and usage examples.
     test.md                 # Testing
     design-ui.md            # UI/UX design
     build.md                # Implementation
+    prompt-help.md          # Prompt optimization help
 
 AGENTS.md                   # Quick reference for all agents
 ```
@@ -69,6 +75,32 @@ Modify rules in `.cursor/rules/` to match your team's workflow:
 - Update `always-apply/RULE.md` for global principles
 - Adjust agent-specific rules for your coding standards
 - Add project-specific rule folders (e.g., `react-patterns/RULE.md`)
+
+### Scripts and Prompts
+
+Enhance your rules with additional files for templates and examples:
+- **Scripts** (`scripts/`): Helper scripts referenced by rules for code generation, validation, or automation
+- **Prompts** (`prompts/`): Reusable prompt templates for consistent AI interactions
+- **Templates** (`templates/`): Code templates, architecture patterns, or design templates
+- **Examples** (`examples/`): Reference implementations and code patterns
+- **Checklists** (`checklists/`): Review checklists, quality gates, or validation criteria
+
+These files can be referenced in your `RULE.md` files to provide concrete examples and maintain consistency across your team.
+
+### Coding Standards and Documentation
+
+Reference your team's documentation directly in rules:
+- **Coding standards**: Link to or embed style guides, linting rules, and conventions
+- **Best practices**: Reference architecture decision records (ADRs), design patterns, or team guidelines
+- **Style guides**: Include formatting rules, naming conventions, and code organization standards
+- **Other docs**: Reference API documentation, component libraries, or project-specific documentation
+
+Example: In `development-agent/RULE.md`, you might reference:
+```
+See `docs/coding-standards.md` for style guidelines
+Follow patterns in `examples/api-client.ts`
+Use templates from `templates/component.tsx`
+```
 
 ## Key Principles
 

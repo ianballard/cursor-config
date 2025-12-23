@@ -78,6 +78,7 @@ Trigger with `/` in chat:
 | `/review` | Code review |
 | `/test` | Create or run tests |
 | `/debug` | Bug investigation |
+| `/prompt-help` | Get help crafting effective prompts |
 
 ---
 
