@@ -1,5 +1,5 @@
 ---
-description: "Apply when gathering requirements, planning projects, or breaking down work"
+description: "Planning Agent: Apply when gathering requirements, planning projects, or breaking down work"
 alwaysApply: false
 ---
 

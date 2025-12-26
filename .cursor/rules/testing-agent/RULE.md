@@ -1,5 +1,5 @@
 ---
-description: "Apply when creating or analyzing tests"
+description: "Testing Agent: Apply when creating or analyzing tests"
 alwaysApply: false
 ---
 

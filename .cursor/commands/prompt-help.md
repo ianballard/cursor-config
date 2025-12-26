@@ -9,5 +9,5 @@ Get help crafting effective prompts and determining the right agent, mode, and m
 /prompt-help I'm unsure which agent to use for this task
 ```
 
-Applies `prompt-engineering-agent.mdc` rules automatically.
+Applies `prompt-engineering-agent/RULE.md` rules automatically.
 

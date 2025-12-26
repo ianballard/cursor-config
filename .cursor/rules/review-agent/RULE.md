@@ -1,5 +1,5 @@
 ---
-description: "Apply when reviewing code or PRs"
+description: "Review Agent: Apply when reviewing code or PRs"
 alwaysApply: false
 ---
 

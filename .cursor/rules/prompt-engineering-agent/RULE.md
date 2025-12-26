@@ -1,5 +1,5 @@
 ---
-description: "Apply when helping users craft effective prompts"
+description: "Prompt Engineering Agent: Apply when helping users craft effective prompts"
 alwaysApply: false
 ---
 

@@ -10,4 +10,4 @@ Make technical decisions with build vs. buy analysis using Architecture Agent.
 /eval Generic PDF reading - Custom OCR build vs. use frontier multi-modal LLM?
 ```
 
-Applies `architecture-agent.mdc` rules automatically.
+Applies `architecture-agent/RULE.md` rules automatically.

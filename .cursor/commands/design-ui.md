@@ -1,6 +1,6 @@
 # Design UI
 
-Create UI/UX designs and prototypes using Designer Agent.
+Create UI/UX designs and prototypes using UI/UX Designer Agent.
 
 ## Usage
 ```
@@ -8,4 +8,4 @@ Create UI/UX designs and prototypes using Designer Agent.
 /design-ui dashboard for analytics
 ```
 
-Applies `designer-agent.mdc` rules automatically.
+Applies `designer-agent/RULE.md` rules automatically.

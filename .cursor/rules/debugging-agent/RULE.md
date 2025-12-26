@@ -1,5 +1,5 @@
 ---
-description: "Apply when investigating bugs or debugging issues"
+description: "Debugging Agent: Apply when investigating bugs or debugging issues"
 alwaysApply: false
 ---
 

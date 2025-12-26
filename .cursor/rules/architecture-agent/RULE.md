@@ -1,5 +1,5 @@
 ---
-description: "Apply when designing architecture, making technical decisions, or evaluating solutions"
+description: "Architecture Agent: Apply when designing architecture, making technical decisions, or evaluating solutions"
 alwaysApply: false
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: "Apply when handling deployment, infrastructure, or DevOps tasks"
+description: "Devops Agent: Apply when handling deployment, infrastructure, or DevOps tasks"
 alwaysApply: false
 ---
 

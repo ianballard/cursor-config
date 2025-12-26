@@ -1,5 +1,5 @@
 ---
-description: "Apply when writing or implementing code"
+description: "Development Agent: Apply when writing or implementing code"
 alwaysApply: false
 ---
 

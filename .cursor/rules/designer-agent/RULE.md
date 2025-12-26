@@ -1,5 +1,5 @@
 ---
-description: "Apply when designing UI/UX or creating prototypes"
+description: "UI/UX Designer Agent: Apply when designing UI/UX or creating prototypes"
 alwaysApply: false
 ---
 
