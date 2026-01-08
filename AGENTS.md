@@ -39,6 +39,7 @@
 - Avoid premature optimization or over-generalization
 - ALWAYS Adhere to DRY, KISS, SOLID principles
 - Use additional project specific coding standards, best practices, and style guides 
+- Always use Context7 MCP for library/API documentation, code generation, setup or configuration steps when needed.
 
 ## Testing
 - Run existing tests before suggesting changes
