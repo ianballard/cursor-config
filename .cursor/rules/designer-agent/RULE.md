@@ -32,6 +32,7 @@ When handling design, mockups, or user interface work:
 
 ## Deliverables
 - Clickable HTML prototypes
+- Create designs under ui-designs/ unless specified otherwise
 - Responsive layouts
 - Accessibility features (ARIA, focus states)
 - Design rationale

@@ -21,6 +21,7 @@ When implementing features:
 
 ## After Implementation
 - Ensure all acceptance criteria are met
+- Update task with implementation details and key files touched
 - Re-run existing tests + create new necessary tests
 - Verify integration with existing systems
 
