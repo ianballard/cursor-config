@@ -4,11 +4,18 @@ A step-by-step guide for using AI agents to build production-grade projects from
 
 ## Overview
 
-This guide walks through the complete lifecycle of a production project using specialized AI agents. Follow this workflow to maintain quality, consistency, and efficiency throughout development. The key is having artifacts continuously created and updated as development progresses that can be used as context for further AI-driven development.
+This guide walks through the complete lifecycle of a production project using specialized AI agents. Follow this workflow to maintain quality, consistency, and efficiency throughout development. The key is to plan heavily and to continuously create and update artifacts as refinement and development progress, so they can be used as context for further AI-driven development.
 
 ---
 
-## Phase 1: Initial Setup
+## Phase 1: Initial Setup & Infrastructure
+
+### *Start by reading the [README.md](./README.md) for context.*
+
+**Phase 1 Goals:**
+1. Define project vision, requirements, and architecture
+2. Break down work into tasks
+3. Scaffold core infrastructure before feature development begins
 
 ### 1.1 Install Backlog.md CLI
 
@@ -227,13 +234,110 @@ Check:
 /plan review all tasks for [project name] for gaps
 ```
 
+### 1.5 Scaffold Infrastructure (DevOps Agent)
+
+*Skip if you want to have dedicated tasks to capture this*
+
+Before starting the development loop, set up the foundational infrastructure and development environment. This creates the scaffolding that all feature development will build upon.
+
+**Important:** Create specific infrastructure tasks in your backlog for:
+- Repository structure and monorepo setup (if applicable)
+- Development environment (Docker, local setup scripts)
+- CI/CD pipeline basics
+- Core infrastructure (databases, servers, functions, gateways, etc.)
+- Deployment environments (dev, staging, production)
+
+**Prompt:**
+```
+DevOps Agent: Scaffold core infrastructure for [project name]
+
+Architecture: docs/architecture.md
+Specifications: docs/specifications.md
+
+Set up:
+- Repository structure (monorepo/polyrepo)
+- Development environment (Docker Compose, local setup)
+- CI/CD pipeline (GitHub Actions, GitLab CI, etc.)
+- Core infrastructure as code (Terraform/CloudFormation/CDK)
+- Database migrations framework
+- Environment configuration management
+- Basic monitoring and logging
+- Deployment scripts for dev/staging/production
+```
+
+**Shorthand:**
+```
+/devops scaffold infrastructure for [project name]
+```
+
+**Review infrastructure setup:**
+```
+Architecture Agent: Review infrastructure scaffolding for [project name]
+
+Focus:
+- Does it support the architecture requirements?
+- Are environments properly isolated?
+- Is local development easy to set up?
+- Are there any security gaps?
+- Is the CI/CD pipeline sufficient?
+- Are costs optimized?
+```
+
+### 1.6 Deploy Infra
+
+- Test and run the pipelines manually
+
 ---
 
 ## Phase 2: Development Loop
 
 For each task in your backlog, follow this agent sequence:
 
-### 2.1 Implement (Development Agent)
+### 2.1 Plan Implementation (Planning Agent)
+
+Before writing code, create AND review a detailed implementation plan for the task.
+
+**Prompt:**
+```
+Planning Agent: Create implementation plan for task #[task-id]
+```
+
+**Shorthand:**
+```
+/plan implementation for task-5
+```
+
+**Example:**
+```
+Planning Agent: Create implementation plan for task-5 - User registration API
+```
+
+**Review and refine the plan:**
+```
+Planning Agent: Review implementation plan for task-5
+
+Plan:
+[Reference the implementation plan]
+
+Validate:
+- Does the approach align with architecture docs?
+- Are all edge cases considered?
+- Are security concerns addressed?
+- Is the scope appropriate (not over-engineering)?
+- Are dependencies justified?
+- Is the testing strategy comprehensive?
+- Are there any simpler alternatives?
+```
+
+**Shorthand:**
+```
+/plan review implementation plan for task-5
+```
+
+**Manual Human Review**
+- Important!!! - Review and validate the plan yourself
+
+### 2.2 Implement (Development Agent)
 
 **Prompt:**
 ```
@@ -250,7 +354,7 @@ Development Agent: Implement task #[task-id]
 Development Agent: Implement task-5 - User registration API
 ```
 
-### 2.2 Review (Review Agent)
+### 2.3 Review (Review Agent)
 
 **Prompt:**
 ```
@@ -278,7 +382,7 @@ Files changed:
 @src/models/user.ts
 ```
 
-### 2.3 Test (Testing Agent)
+### 2.4 Test (Testing Agent)
 
 **Prompt:**
 ```
@@ -306,7 +410,7 @@ Test requirements:
 Coverage target: 90%
 ```
 
-### 2.4 Debug (Debugging Agent)
+### 2.5 Debug (Debugging Agent)
 
 **Prompt:**
 ```
@@ -343,7 +447,7 @@ Environment:
 - PostgreSQL: 15.3
 ```
 
-### 2.5 Deploy (DevOps Agent)
+### 2.6 Deploy (DevOps Agent)
 
 **Prompt:**
 ```
@@ -587,11 +691,12 @@ Track which prompts work best and create reusable templates in `.cursor/commands
 
 
 ### Agent Sequence for Each Task
-1. Development Agent → Implement
-2. Review Agent → Code review
-3. Testing Agent → Create/run tests
-4. Debugging Agent → Fix issues (if needed)
-5. DevOps Agent → Deploy (when ready)
+1. Planning Agent → Plan implementation & review plan
+2. Development Agent → Implement
+3. Review Agent → Code review
+4. Testing Agent → Create/run tests
+5. Debugging Agent → Fix issues (if needed)
+6. DevOps Agent → Deploy (when ready)
 
 ---
 
