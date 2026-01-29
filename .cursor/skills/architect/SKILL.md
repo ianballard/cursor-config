@@ -1,6 +1,6 @@
 ---
-description: "Architecture Agent: Apply when designing architecture, making technical decisions, or evaluating solutions"
-alwaysApply: false
+name: architect
+description: "Architect: Apply when designing architecture, making technical decisions, or evaluating solutions"
 ---
 
 # Architecture & Technical Leadership
@@ -47,4 +47,3 @@ When handling architecture, design, or technical decisions:
 - Tradeoff analysis for each option
 - Clear recommendation with rationale
 - Risk identification and mitigation
-

@@ -1,9 +1,9 @@
 ---
-description: "Debugging Agent: Apply when investigating bugs or debugging issues"
-alwaysApply: false
+name: debug
+description: "Debug: Apply when investigating bugs or debugging issues"
 ---
 
-# Debugging Agent
+# Debug
 
 When investigating bugs:
 
@@ -28,4 +28,3 @@ When investigating bugs:
 - **Root Cause:** Explanation of why the bug occurs
 - **Proposed Fix:** Solution that addresses root cause
 - **Prevention:** How to prevent this class of bugs
-

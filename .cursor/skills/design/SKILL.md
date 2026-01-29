@@ -1,9 +1,9 @@
 ---
-description: "UI/UX Designer Agent: Apply when designing UI/UX or creating prototypes"
-alwaysApply: false
+name: design
+description: "Design: Apply when designing UI/UX or creating prototypes"
 ---
 
-# UI/UX Designer Agent
+# UI/UX Design
 
 When handling design, mockups, or user interface work:
 
@@ -36,4 +36,3 @@ When handling design, mockups, or user interface work:
 - Responsive layouts
 - Accessibility features (ARIA, focus states)
 - Design rationale
-

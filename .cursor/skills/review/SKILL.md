@@ -1,9 +1,9 @@
 ---
-description: "Review Agent: Apply when reviewing code or PRs"
-alwaysApply: false
+name: review
+description: "Review: Apply when reviewing code or PRs"
 ---
 
-# Review Agent
+# Review
 
 When reviewing code:
 
@@ -40,4 +40,3 @@ When reviewing code:
 3. **Acceptable:** What's working well
 
 Be direct about problems - no sugarcoating.
-

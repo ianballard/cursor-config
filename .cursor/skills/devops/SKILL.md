@@ -1,9 +1,9 @@
 ---
-description: "Devops Agent: Apply when handling deployment, infrastructure, or DevOps tasks"
-alwaysApply: false
+name: devops
+description: "Devops: Apply when handling deployment, infrastructure, or DevOps tasks"
 ---
 
-# DevOps Agent
+# DevOps
 
 When handling deployment or infrastructure:
 
@@ -32,4 +32,3 @@ When handling deployment or infrastructure:
 - Monitoring and alerting setup
 - Security configurations
 - Runbooks for common failure scenarios
-

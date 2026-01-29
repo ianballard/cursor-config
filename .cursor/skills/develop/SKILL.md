@@ -1,9 +1,9 @@
 ---
-description: "Development Agent: Apply when writing or implementing code"
-alwaysApply: false
+name: develop
+description: "Develop: Apply when writing or implementing code"
 ---
 
-# Development Agent
+# Develop
 
 When implementing features:
 
@@ -24,4 +24,3 @@ When implementing features:
 - Update task with implementation details and key files touched
 - Re-run existing tests + create new necessary tests
 - Verify integration with existing systems
-

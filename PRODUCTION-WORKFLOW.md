@@ -45,12 +45,12 @@ Start by gathering requirements and understanding the problem space before defin
 
 **Prompt:**
 ```
-Planning Agent: Help me plan and gather requirements for [project name]
+Plan: Help me plan and gather requirements for [project name]
 ```
 
 **Example:**
 ```
-Planning Agent: Help me plan and gather requirements for TaskFlow
+Plan: Help me plan and gather requirements for TaskFlow
 
 Context:
 - Initial idea: A simple task management app for small remote teams
@@ -67,7 +67,7 @@ Please help me:
 
 **Shorthand:**
 ```
-/plan gather requirements for TaskFlow
+@plan gather requirements for TaskFlow
 ```
 
 **Step 2: Define the Vision**
@@ -76,12 +76,12 @@ Using the requirements gathered, create a clear vision document.
 
 **Prompt:**
 ```
-Planning Agent: Create project vision document for [project name]
+Plan: Create project vision document for [project name]
 ```
 
 **Example:**
 ```
-Planning Agent: Create project vision document for TaskFlow
+Plan: Create project vision document for TaskFlow
 
 Based on requirements gathered:
 - Functional: Task CRUD, board views, real-time updates, GitHub integration, user management
@@ -99,7 +99,7 @@ Create vision with:
 
 **Shorthand:**
 ```
-/plan create a vision doc for TaskFlow using requirements: [requirements]
+@plan create a vision doc for TaskFlow using requirements: [requirements]
 ```
 
 
@@ -109,12 +109,12 @@ Once requirements and vision are clear, translate them into visual designs.
 
 **Prompt:**
 ```
-Designer Agent: Create clickable mockups for [project name]
+Design: Create clickable mockups for [project name]
 ```
 
 **Example:**
 ```
-Designer Agent: Create clickable mockups for TaskFlow
+Design: Create clickable mockups for TaskFlow
 
 Context:
 - Vision: docs/vision.md
@@ -131,14 +131,14 @@ Deliverables:
 
 **Shorthand:**
 ```
-/design-ui create mockups for TaskFlow
+@design create mockups for TaskFlow
 ```
 
 **Step 4: Review Requirements, Vision, and Mockups Together**
 
 **Prompt:**
 ```
-Planning Agent: Review requirements, vision, and mockups for [project name]
+Plan: Review requirements, vision, and mockups for [project name]
 
 Requirements: [link to requirements doc]
 Vision: [link to vision doc]
@@ -157,7 +157,7 @@ Validate:
 
 **Example:**
 ```
-Planning Agent: Review requirements, vision, and mockups for TaskFlow
+Plan: Review requirements, vision, and mockups for TaskFlow
 
 Requirements: docs/requirements.md
 Vision: docs/vision.md
@@ -174,7 +174,7 @@ Validate:
 
 **Shorthand:**
 ```
-/plan review requirements, vision, and mockups for [project name] and identify any gaps
+@plan review requirements, vision, and mockups for [project name] and identify any gaps
 ```
 
 **Note:** For exploratory projects where the problem is unclear, you may create rough mockups first to help crystallize the vision. In that case, iterate: mockups → requirements → vision → refined mockups.
@@ -185,12 +185,12 @@ Define system architecture and technical specifications.
 
 **Prompt:**
 ```
-Architecture Agent: Design project specifications and system architecture for [project name]
+Architect:  Design project specifications and system architecture for [project name]
 ```
 
 **Review the output:**
 ```
-Architecture Agent: Review architecture for [project name]
+Architect:  Review architecture for [project name]
 
 Focus:
 - Scalability concerns
@@ -201,8 +201,8 @@ Focus:
 
 **Shorthand:**
 ```
-/eval create project specs and system architecture for [project name]
-/eval build vs. buy [task name]
+@architect create project specs and system architecture for [project name]
+@architect build vs. buy [task name]
 ```
 
 ### 1.4 Break Down into Tasks
@@ -211,12 +211,12 @@ Convert specifications into actionable tasks in backlog.md.
 
 **Prompt:**
 ```
-Planning Agent: Break down [project name] into backlog.md tasks
+Plan: Break down [project name] into backlog.md tasks
 ```
 
 **Review tasks:**
 ```
-Planning Agent: Review backlog tasks for [project name]
+Plan: Review backlog tasks for [project name]
 
 Tasks:
 [Reference backlog tasks]
@@ -230,11 +230,11 @@ Check:
 
 **Shorthand:**
 ```
-/plan create all tasks for [project name] based on project spec document
-/plan review all tasks for [project name] for gaps
+@plan create all tasks for [project name] based on project spec document
+@plan review all tasks for [project name] for gaps
 ```
 
-### 1.5 Scaffold Infrastructure (DevOps Agent)
+### 1.5 Scaffold Infrastructure (`@devops`)
 
 *Skip if you want to have dedicated tasks to capture this*
 
@@ -249,7 +249,7 @@ Before starting the development loop, set up the foundational infrastructure and
 
 **Prompt:**
 ```
-DevOps Agent: Scaffold core infrastructure for [project name]
+DevOps: Scaffold core infrastructure for [project name]
 
 Architecture: docs/architecture.md
 Specifications: docs/specifications.md
@@ -267,12 +267,12 @@ Set up:
 
 **Shorthand:**
 ```
-/devops scaffold infrastructure for [project name]
+@devops scaffold infrastructure for [project name]
 ```
 
 **Review infrastructure setup:**
 ```
-Architecture Agent: Review infrastructure scaffolding for [project name]
+Architect: Review infrastructure scaffolding for [project name]
 
 Focus:
 - Does it support the architecture requirements?
@@ -293,28 +293,28 @@ Focus:
 
 For each task in your backlog, follow this agent sequence:
 
-### 2.1 Plan Implementation (Planning Agent)
+### 2.1 Plan Implementation (`@plan`)
 
 Before writing code, create AND review a detailed implementation plan for the task.
 
 **Prompt:**
 ```
-Planning Agent: Create implementation plan for task #[task-id]
+Plan: Create implementation plan for task #[task-id]
 ```
 
 **Shorthand:**
 ```
-/plan implementation for task-5
+@plan implementation for task-5
 ```
 
 **Example:**
 ```
-Planning Agent: Create implementation plan for task-5 - User registration API
+Plan: Create implementation plan for task-5 - User registration API
 ```
 
 **Review and refine the plan:**
 ```
-Planning Agent: Review implementation plan for task-5
+Plan: Review implementation plan for task-5
 
 Plan:
 [Reference the implementation plan]
@@ -331,44 +331,44 @@ Validate:
 
 **Shorthand:**
 ```
-/plan review implementation plan for task-5
+@plan review implementation plan for task-5
 ```
 
 **Manual Human Review**
 - Important!!! - Review and validate the plan yourself
 
-### 2.2 Implement (Development Agent)
+### 2.2 Develop (`@develop`)
 
 **Prompt:**
 ```
-Development Agent: Implement task #[task-id]
+Develop: Implement task #[task-id]
 ```
 
 **Shorthand:**
 ```
-/build task-5 user login endpoint
+@develop task-5 user login endpoint
 ```
 
 **Example:**
 ```
-Development Agent: Implement task-5 - User registration API
+Develop: Implement task-5 - User registration API
 ```
 
-### 2.3 Review (Review Agent)
+### 2.3 Review (`@review`)
 
 **Prompt:**
 ```
-Review Agent: Review implementation of task #[task-id]
+Review: implementation of task #[task-id]
 ```
 
 **Shorthand:**
 ```
-/review task-5
+@review task-5
 ```
 
 **Example:**
 ```
-Review Agent: Review implementation of task-5
+Review: implementation of task-5
 
 Focus:
 - Security: Password hashing, email validation, SQL injection
@@ -382,21 +382,21 @@ Files changed:
 @src/models/user.ts
 ```
 
-### 2.4 Test (Testing Agent)
+### 2.4 Test (`@test`)
 
 **Prompt:**
 ```
-Testing Agent: Create tests for task-[task-id]
+Test: Create tests for task-[task-id]
 ```
 
 **Shorthand:**
 ```
-/test task-5
+@test task-5
 ```
 
 **Example:**
 ```
-Testing Agent: Create tests for user registration API (task-5)
+Test: Create tests for user registration API (task-5)
 
 Implementation:
 @src/api/auth/register.ts
@@ -410,11 +410,11 @@ Test requirements:
 Coverage target: 90%
 ```
 
-### 2.5 Debug (Debugging Agent)
+### 2.5 Debug (`@debug`)
 
 **Prompt:**
 ```
-Debugging Agent: Investigate issue in task-[task-id]
+Debug: Investigate issue in task-[task-id]
 
 Error:
 [Paste error message or stack trace]
@@ -422,12 +422,12 @@ Error:
 
 **Shorthand:**
 ```
-/debug task-5 issue where registration endpoint returns 500
+@debug task-5 issue where registration endpoint returns 500
 ```
 
 **Example:**
 ```
-Debugging Agent: Investigate registration endpoint failure (task-5)
+Debug: Investigate registration endpoint failure (task-5)
 
 Error:
 ```
@@ -447,21 +447,21 @@ Environment:
 - PostgreSQL: 15.3
 ```
 
-### 2.6 Deploy (DevOps Agent)
+### 2.6 Deploy (`@devops`)
 
 **Prompt:**
 ```
-DevOps Agent: Set up deployment for task-[task-id]
+DevOps: Set up deployment for task-[task-id]
 ```
 
 **Shorthand:**
 ```
-/devops Set up deployment for task-[task-id]
+@devops Set up deployment for task-[task-id]
 ```
 
 **Example:**
 ```
-DevOps Agent: Deploy authentication service to staging (task-5)
+DevOps: Deploy authentication service to staging (task-5)
 
 Infrastructure:
 - Environment: staging
@@ -495,9 +495,9 @@ Create a coding standards document that agents can reference.
 **File:** `docs/coding-standards.md`
 
 
-**Reference in agent rules:**
+**Reference in Agent Skills:**
 
-Edit `.cursor/rules/development-agent/RULE.md`:
+Edit `.cursor/skills/develop/SKILL.md`:
 ```markdown
 ## Code Quality Standards
 - Follow coding standards in `docs/coding-standards.md`
@@ -522,7 +522,7 @@ Create reusable templates for common patterns.
 
 **Reference in prompts:**
 ```
-Development Agent: Create new API endpoint for user profile update
+Develop:  Create new API endpoint for user profile update
 
 Follow template in templates/api-endpoint.ts
 ```
@@ -535,9 +535,9 @@ Provide reference implementations for common patterns.
 
 **Example:** `examples/repository-pattern.ts`
 
-**Reference in agent rules:**
+**Reference in Agent Skills:**
 
-Edit `.cursor/rules/development-agent/RULE.md`:
+Edit `.cursor/skills/develop/SKILL.md`:
 ```markdown
 ## Code Patterns
 - Use repository pattern for data access (see examples/repository-pattern.ts)
@@ -545,15 +545,13 @@ Edit `.cursor/rules/development-agent/RULE.md`:
 - Implement dependency injection (see examples/dependency-injection.ts)
 ```
 
-### 3.5 Reference in Commands
+### 3.5 Reference in Skills
 
-Update commands to automatically reference context files.
+Update skills to automatically reference context files.
 
-Edit `.cursor/commands/build.md`:
+Edit `.cursor/skills/develop/SKILL.md`:
 ```markdown
-# Build
-
-Implement a task using Development Agent with project context.
+## Project Context
 
 Automatically references:
 - Coding standards: `docs/coding-standards.md`
@@ -561,57 +559,58 @@ Automatically references:
 - Templates: `templates/`
 - Examples: `examples/`
 ```
-## Usage
+
+**Usage:**
 ```
-/build task-6 user profile endpoint
+@develop task-6 user profile endpoint
 ```
 
 ---
 
 ## Phase 4: Best Practices
 
-### 4.1 When to Use Which Agent
+### 4.1 When to Use Which Skill
 
-| Scenario | Agent | Why |
+| Scenario | Skill | Why |
 |----------|-------|-----|
-| Starting new project | Planning Agent → Architecture Agent | Define scope and technical approach |
-| Unclear requirements | Planning Agent | Clarify ambiguities before coding |
-| Technical decisions | Architecture Agent | Evaluate tradeoffs systematically |
-| UI/UX work | Designer Agent | Visual design expertise |
-| Writing code | Development Agent | Implementation focus |
-| Code review | Review Agent | Quality and security checks |
-| Creating tests | Testing Agent | Test strategy and coverage |
-| Bug investigation | Debugging Agent | Systematic troubleshooting |
-| Infrastructure | DevOps Agent | Deployment and operations |
-| Unsure which agent | Prompt Engineering Agent | Get guidance on approach |
+| Starting new project | `@plan` → `@architect` | Define scope and technical approach |
+| Unclear requirements | `@plan` | Clarify ambiguities before coding |
+| Technical decisions | `@architect` | Evaluate tradeoffs systematically |
+| UI/UX work | `@design` | Visual design expertise |
+| Writing code | `@develop` | Implementation focus |
+| Code review | `@review` | Quality and security checks |
+| Creating tests | `@test` | Test strategy and coverage |
+| Bug investigation | `@debug` | Systematic troubleshooting |
+| Infrastructure | `@devops` | Deployment and operations |
+| Unsure which skill | `@prompt-engineer` | Get guidance on approach |
 
 ### 4.2 Efficient Iteration
 
-**Use shorthand commands for speed:**
+**Use agent skills for speed:**
 ```bash
-# Instead of long prompts, use commands
-/plan user authentication          # Planning
-/eval OAuth2 vs JWT               # Architecture decision
-/design-ui login page             # UI design
-/build #123                       # Implementation
-/review #123                      # Code review
-/test #123                        # Testing
-/debug registration fails         # Debugging
+# Attach skills to invoke specific agent behaviors
+@plan user authentication          # Planning
+@architect OAuth2 vs JWT            # Architecture decision
+@design login page                   # UI design
+@develop #123                      # Implementation
+@review #123                           # Code review
+@test #123                          # Testing
+@debug registration fails          # Debugging
 ```
 
 **Chain agents for complete workflows:**
 ```
-1. /plan email notification system
-2. /eval SendGrid vs AWS SES vs self-hosted
-3. /build #124 email service
-4. /review #124
-5. /test #124
-6. /devops deploy email service to staging
+1. @plan email notification system
+2. @architect SendGrid vs AWS SES vs self-hosted
+3. @develop #124 email service
+4. @review #124
+5. @test #124
+6. @devops deploy email service to staging
 ```
 
 **Leverage project context:**
 ```
-Development Agent: Implement task #123
+Develop:  Implement task #123
 
 Follow:
 - Coding standards in docs/coding-standards.md
@@ -665,45 +664,44 @@ echo "// New pattern discovered" > examples/new-pattern.ts
 # Update coding standards
 # Edit docs/coding-standards.md
 
-# Update agent rules to reference new patterns
-# Edit .cursor/rules/development-agent/RULE.md
+# Update agent skills to reference new patterns
+# Edit .cursor/skills/develop/SKILL.md
 ```
 
 **Refine agent usage:**
-Track which prompts work best and create reusable templates in `.cursor/commands/`.
+Track which prompts work best and update agent skills in `.cursor/skills/`.
 
 ---
 
 ## Quick Reference
 
-### Essential Commands
+### Agent Skills
 ```bash
-
-# Agent shortcuts
-/plan [feature]
-/eval [decision]
-/design-ui [interface]
-/build #[task-id]
-/review #[task-id]
-/test #[task-id]
-/debug [issue]
+# Attach skills to invoke specific agents
+@plan [feature]
+@architect [decision]
+@design [interface]
+@develop #[task-id]
+@review #[task-id]
+@test #[task-id]
+@debug [issue]
+@devops [infrastructure]
 ```
 
 
-### Agent Sequence for Each Task
-1. Planning Agent → Plan implementation & review plan
-2. Development Agent → Implement
-3. Review Agent → Code review
-4. Testing Agent → Create/run tests
-5. Debugging Agent → Fix issues (if needed)
-6. DevOps Agent → Deploy (when ready)
+### Skill Sequence for Each Task
+1. `@plan` → Plan implementation & review plan
+2. `@develop` → Implement
+3. `@review` → Code review
+4. `@test` → Create/run tests
+5. `@debug` → Fix issues (if needed)
+6. `@devops` → Deploy (when ready)
 
 ---
 
 ## Resources
 
 - [Backlog.md Documentation](https://github.com/MrLesk/Backlog.md)
-- [Cursor Rules Documentation](https://cursor.com/docs/context/rules)
-- [Cursor Commands Documentation](https://cursor.com/docs/agent/chat/commands)
+- [Cursor Agent Skills Documentation](https://cursor.com/docs/context/skills)
 - [AGENTS.md](./AGENTS.md) - Global rules and agent reference
 - [README.md](./README.md) - Setup and customization guide

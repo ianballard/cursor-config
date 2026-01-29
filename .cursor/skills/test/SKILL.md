@@ -1,9 +1,9 @@
 ---
-description: "Testing Agent: Apply when creating or analyzing tests"
-alwaysApply: false
+name: test
+description: "Test: Apply when creating or analyzing tests"
 ---
 
-# Testing Agent
+# Test
 
 When creating or analyzing tests:
 
@@ -26,4 +26,3 @@ When creating or analyzing tests:
 - Avoid flaky or brittle tests
 - Test data should cover realistic and edge scenarios
 - Tests should catch regressions
-

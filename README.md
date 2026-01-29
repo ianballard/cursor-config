@@ -12,88 +12,78 @@ A template for using specialized AI agents in Cursor IDE for different software 
 
 2. **Open project in Cursor IDE**
 
-3. **Invoke an agent:**
+3. **Invoke a skill:**
    ```
-   /plan task-001 user authentication
+   @plan task-001 user authentication
    ```
 
-See `AGENTS.md` for all available agents and usage examples.
+See `AGENTS.md` for all available skills and usage examples.
 
 ## File Structure
 
 ```
 .cursor/
-  rules/                    # Agent behaviors (auto-applied by Cursor)
-    architecture-agent/
-      RULE.md               # System design + technical decisions
+  skills/                   # Agent Skills (attach with @skill-name)
+    architect/
+      SKILL.md              # System design + technical decisions
       templates/            # Architecture templates & examples
       prompts/              # Reusable prompt templates
-    planning-agent/
-      RULE.md               # Requirements + task planning
-    development-agent/
-      RULE.md               # Code implementation
+    plan/
+      SKILL.md              # Requirements + task planning
+    develop/
+      SKILL.md              # Code implementation
       examples/             # Code examples & patterns
-      scripts/              # Helper scripts referenced by rules
-    review-agent/
-      RULE.md               # Code review
+      scripts/              # Helper scripts referenced by skills
+    review/
+      SKILL.md              # Code review
       checklists/           # Review checklists
-    testing-agent/
-      RULE.md               # Test creation
-    debugging-agent/
-      RULE.md               # Bug investigation
-    devops-agent/
-      RULE.md               # Infrastructure
-    designer-agent/
-      RULE.md               # UI/UX design
-    prompt-engineering-agent/
-      RULE.md               # Prompt optimization
-  
-  commands/                 # Reusable workflows (trigger with /)
-    plan.md                 # Multi-agent feature planning
-    eval.md                 # Technical decisions
-    review.md               # Code review
-    debug.md                # Bug investigation
-    test.md                 # Testing
-    design-ui.md            # UI/UX design
-    build.md                # Implementation
-    prompt-help.md          # Prompt optimization help
+    testing/
+      SKILL.md              # Test creation
+    debug/
+      SKILL.md              # Bug investigation
+    devops/
+      SKILL.md              # Infrastructure
+    design/
+      SKILL.md              # UI/UX design
+    prompt-engineer/
+      SKILL.md              # Prompt optimization
 
 AGENTS.md                   # Global rules & quick reference for all agents
 ```
 
 ## How It Works
 
-- **Rules** in `.cursor/rules/` are folders containing `RULE.md` files
-- Rules are auto-applied based on their type (always, intelligent, file-pattern, manual)
-- **Commands** in `.cursor/commands/` are workflows triggered with `/command-name`
+- **Skills** in `.cursor/skills/` are folders containing `SKILL.md` files
+- Skills are attached to conversations using `@skill-name` (e.g., `@plan`)
+- Cursor discovers skills based on their `description` field in the frontmatter
 
 ## Customization
 
-Modify rules in `.cursor/rules/` to match your team's workflow:
+Modify skills in `.cursor/skills/` to match your team's workflow:
 - Update `AGENTS.md` for global rules
-- Adjust agent-specific rules for your coding standards
-- Add project-specific rule folders (e.g., `react-patterns/RULE.md`)
+- Adjust agent-specific skills for your coding standards
+- Add project-specific skill folders (e.g., `react-patterns/SKILL.md`)
 
 ### Scripts and Prompts
 
-Enhance your rules with additional files for templates and examples:
-- **Scripts** (`scripts/`): Helper scripts referenced by rules for code generation, validation, or automation
+Enhance your skills with additional files for templates and examples:
+- **Scripts** (`scripts/`): Helper scripts referenced by skills for code generation, validation, or automation
 - **Prompts** (`prompts/`): Reusable prompt templates for consistent AI interactions
 - **Templates** (`templates/`): Code templates, architecture patterns, or design templates
 - **Examples** (`examples/`): Reference implementations and code patterns
 - **Checklists** (`checklists/`): Review checklists, quality gates, or validation criteria
 
-These files can be referenced in your `RULE.md` files to provide concrete examples and maintain consistency across your team.
+These files can be referenced in your `SKILL.md` files to provide concrete examples and maintain consistency across your team.
 
 ### Coding Standards and Documentation
 
-Reference your team's documentation directly in rules:
+Reference your team's documentation directly in skills:
 - **Coding standards**: Link to or embed style guides, linting rules, and conventions
 - **Best practices**: Reference architecture decision records (ADRs), design patterns, or team guidelines
 - **Style guides**: Include formatting rules, naming conventions, and code organization standards
 - **Other docs**: Reference API documentation, component libraries, or project-specific documentation
 
-Example: In `development-agent/RULE.md`, you might reference:
+Example: In `develop/SKILL.md`, you might reference:
 ```
 See `docs/coding-standards.md` for style guidelines
 Follow patterns in `examples/api-client.ts`
@@ -116,5 +106,4 @@ Use templates from `templates/component.tsx`
 
 ## Resources
 
-- [Cursor Rules Documentation](https://cursor.com/docs/context/rules)
-- [Cursor Commands Documentation](https://cursor.com/docs/agent/chat/commands)
+- [Cursor Agent Skills Documentation](https://cursor.com/docs/context/skills)

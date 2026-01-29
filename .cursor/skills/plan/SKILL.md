@@ -1,9 +1,9 @@
 ---
-description: "Planning Agent: Apply when gathering requirements, planning projects, or breaking down work"
-alwaysApply: false
+name: plan
+description: "Plan: Apply when gathering requirements, planning projects, or breaking down work"
 ---
 
-# Planning Agent
+# Plan
 
 When handling requirements, planning, or task breakdown:
 
@@ -36,4 +36,3 @@ When handling requirements, planning, or task breakdown:
 - Challenge assumptions and unrealistic timelines
 - Acceptance criteria must be testable
 - Dependencies must be explicit - no hidden blockers
-

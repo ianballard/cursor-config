@@ -64,88 +64,70 @@ When uncertain about impact: STOP and ask rather than guess
 
 Start responses with: `[Optimal Model Type: X]`
 
+# Agent Skills - Quick Reference
 
-# AI Agents - Quick Reference
+Specialized AI agent skills for different development tasks. Skills are defined in `.cursor/skills/` and attached with `@skill-name`.
 
-Specialized AI agents for different development tasks. Agent behaviors are defined in `.cursor/rules/` and apply automatically.
+## Available Skills
 
-## Available Agents
-
-### Planning Agent
+### Plan Skill (`@plan`)
 **When to use:** Requirements gathering, task breakdown, project planning
 ```
-Planning Agent: Plan [feature/project]
+@plan [feature/project]
 ```
 
-### Architecture Agent
+### Architect Skill (`@architect`)
 **When to use:** System design, technical decisions, build vs buy analysis
 ```
-Architecture Agent: Design system for [feature]
+@architect Design system for [feature]
 Context: [requirements, constraints]
 ```
 
-### UI/UX Designer Agent
+### Design Skill (`@design`)
 **When to use:** Interface design, prototypes
 ```
-UI/UX Designer Agent: [Design/Create] [interface]
+@design [Create] [interface]
 ```
 
-### Development Agent
+### Develop Skill (`@develop`)
 **When to use:** Implementing features, writing code, refactoring
 ```
-Development Agent: Implement [task description]
+@develop Implement [task description]
 Task: #[task-id]
 ```
 
-### Review Agent
+### Review Skill (`@review`)
 **When to use:** Code reviews, PR reviews, quality checks
 ```
-Review Agent: Review [code/PR]
+@review [code/PR]
 Focus: [security, performance, maintainability]
 ```
 
-### Testing Agent
+### Test Skill (`@test`)
 **When to use:** Creating test suites, test strategies
 ```
-Testing Agent: Create tests for [component/feature]
+@test Create tests for [component/feature]
 ```
 
-### Debugging Agent
+### Debug Skill (`@debug`)
 **When to use:** Investigating bugs, root cause analysis
 ```
-Debugging Agent: Investigate [bug]
+@debug Investigate [bug]
 Error: [stack trace]
 ```
 
-### DevOps Agent
+### DevOps Skill (`@devops`)
 **When to use:** Infrastructure, CI/CD, deployment
 ```
-DevOps Agent: [Design/Implement] [infrastructure]
+@devops [Design/Implement] [infrastructure]
 Tool: [Terraform, CloudFormation, CDK]
 ```
 
-### Prompt Engineering Agent
-**When to use:** Unsure which agent to use, need help structuring prompts
+### Prompt Engineer Skill (`@prompt-engineer`)
+**When to use:** Unsure which skill to use, need help structuring prompts
 ```
-Prompt Engineering Agent: I need to [describe task]
+@prompt-engineer I need to [describe task]
 ```
-
----
-
-## Commands (Workflows)
-
-Trigger with `/` in chat:
-
-| Command | Purpose |
-|---------|---------|
-| `/plan` | Requirements → Architecture → Task breakdown |
-| `/eval` | Technical decisions with build vs buy |
-| `/design-ui` | UI/UX design |
-| `/build` | Implement task |
-| `/review` | Code review |
-| `/test` | Create or run tests |
-| `/debug` | Bug investigation |
-| `/prompt-help` | Get help crafting effective prompts |
 
 ---
 
@@ -159,5 +141,4 @@ Trigger with `/` in chat:
 
 ## Documentation
 
-- `.cursor/rules/` - Agent behavioral rules (auto-applied by Cursor)
-- `.cursor/commands/` - Reusable workflow commands
+- `.cursor/skills/` - Agent Skills (attach with `@skill-name`)

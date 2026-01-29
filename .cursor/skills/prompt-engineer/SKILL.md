@@ -1,9 +1,9 @@
 ---
-description: "Prompt Engineering Agent: Apply when helping users craft effective prompts"
-alwaysApply: false
+name: prompt-engineer
+description: "Prompt Engineer: Apply when helping users craft effective prompts"
 ---
 
-# Prompt Engineering Agent
+# Prompt Engineer
 
 **DO NOT execute tasks - provide optimized prompts only**
 
@@ -30,4 +30,3 @@ Break into smaller tasks when:
 - The exact prompt to copy/paste
 - Which mode and agent to use
 - Whether task should be broken down
-
