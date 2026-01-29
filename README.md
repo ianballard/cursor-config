@@ -26,17 +26,15 @@ See `AGENTS.md` for all available skills and usage examples.
   skills/                   # Agent Skills (attach with @skill-name)
     architect/
       SKILL.md              # System design + technical decisions
-      templates/            # Architecture templates & examples
-      prompts/              # Reusable prompt templates
+      assets/            # Architecture assets & examples
     plan/
       SKILL.md              # Requirements + task planning
     develop/
       SKILL.md              # Code implementation
-      examples/             # Code examples & patterns
+      references/             # Code examples & patterns
       scripts/              # Helper scripts referenced by skills
     review/
       SKILL.md              # Code review
-      checklists/           # Review checklists
     testing/
       SKILL.md              # Test creation
     debug/
@@ -64,14 +62,12 @@ Modify skills in `.cursor/skills/` to match your team's workflow:
 - Adjust agent-specific skills for your coding standards
 - Add project-specific skill folders (e.g., `react-patterns/SKILL.md`)
 
-### Scripts and Prompts
+### Scripts and Assets
 
 Enhance your skills with additional files for templates and examples:
-- **Scripts** (`scripts/`): Helper scripts referenced by skills for code generation, validation, or automation
-- **Prompts** (`prompts/`): Reusable prompt templates for consistent AI interactions
-- **Templates** (`templates/`): Code templates, architecture patterns, or design templates
-- **Examples** (`examples/`): Reference implementations and code patterns
-- **Checklists** (`checklists/`): Review checklists, quality gates, or validation criteria
+- **Scripts** (`scripts/`): Executable code that agents can run
+- **Assets** (`assets/`): Static resources like templates, images, or data files
+- **References** (`references/`): Additional documentation loaded on demand
 
 These files can be referenced in your `SKILL.md` files to provide concrete examples and maintain consistency across your team.
 
@@ -86,8 +82,8 @@ Reference your team's documentation directly in skills:
 Example: In `develop/SKILL.md`, you might reference:
 ```
 See `docs/coding-standards.md` for style guidelines
-Follow patterns in `examples/api-client.ts`
-Use templates from `templates/component.tsx`
+Follow patterns in `references/api-client.ts`
+Use templates from `assets/component.tsx`
 ```
 
 ## Key Principles
