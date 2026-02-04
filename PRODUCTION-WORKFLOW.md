@@ -119,15 +119,7 @@ Before starting the development loop, set up the foundational infrastructure and
 
 **Review infrastructure setup:**
 ```
-Architect: Review infrastructure scaffolding for [project name]
-
-Focus:
-- Does it support the architecture requirements?
-- Are environments properly isolated?
-- Is local development easy to set up?
-- Are there any security gaps?
-- Is the CI/CD pipeline sufficient?
-- Are costs optimized?
+@architect review infrastructure and deployment plan for [project name]
 ```
 
 ### 1.6 Deploy Infra
