@@ -8,6 +8,7 @@ status=$(echo "$input" | jq -r '.status // "completed"')
 loop_count=$(echo "$input" | jq -r '.loop_count // 0')
 
 # Only trigger followup on completed status and if we haven't looped too many times
+# Update loop count to 0 if you want to temporarily disable this hook.
 if [[ "$status" == "completed" && "$loop_count" -lt 1 ]]; then
     # Return followup message as JSON
     cat << EOF

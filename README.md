@@ -64,7 +64,7 @@ Modify skills in `.cursor/skills/` to match your team's workflow:
 
 ### Scripts and Assets
 
-Enhance your skills with additional files for templates and examples:
+Enhance your skills under each skill directory with additional files for templates and examples:
 - **Scripts** (`scripts/`): Executable code that agents can run
 - **Assets** (`assets/`): Static resources like templates, images, or data files
 - **References** (`references/`): Additional documentation loaded on demand
@@ -100,6 +100,25 @@ Use templates from `assets/component.tsx`
 - **Opus**: Deep analysis, large refactoring
 - **Haiku**: Quick iterations
 
+## Self-Validating Loop
+
+This configuration also includes a hook (`review-and-test-on-stop.sh`) that creates a self-validating loop for code changes on the Agent Stop (agent loop completes) event:
+
+1. **Agent completes a task** - Code changes are made
+2. **Hook triggers automatically** - When the agent stops
+3. **Review phase** - The `@review` skill checks the changes for issues
+4. **Test phase** - The `@test` skill runs tests and creates new ones if needed
+5. **Fix issues** - Any problems found are automatically fixed
+
+The loop runs once per agent session (controlled by `loop_count` in the hook). This ensures code quality without manual intervention.
+
+See `.cursor/hooks/review-and-test-on-stop.sh` for implementation details.
+
 ## Resources
 
 - [Cursor Agent Skills Documentation](https://cursor.com/docs/context/skills)
+- [Cursor Agent Hooks Documentation](https://cursor.com/docs/agent/hooks)
+
+## Production Workflow
+
+Ready to start building? Head over to the [PRODUCTION_WORKFLOW.md](./PRODUCTION-WORKFLOW.md) to understand how it all fits together.

@@ -43,63 +43,20 @@ Start by gathering requirements and understanding the problem space before defin
 
 **Step 1: Requirements Gathering**
 
+
 **Prompt:**
 ```
-Plan: Help me plan and gather requirements for [project name]
-```
-
-**Example:**
-```
-Plan: Help me plan and gather requirements for TaskFlow
-
-Context:
-- Initial idea: A simple task management app for small remote teams
-- Stakeholders: Development team, potential users (startup teams), product owner
-- Known constraints: 3-month timeline, $50k budget, team of 2 developers
-
-Please help me:
-- Clarify what "simple" means and what features are essential
-- Identify functional requirements (what it must do)
-- Identify non-functional requirements (performance, security, scalability)
-- Uncover questions about integrations, user management, data storage
-- Define what "done" looks like for MVP
-```
-
-**Shorthand:**
-```
-@plan gather requirements for TaskFlow
+@plan gather requirements for [project name]
 ```
 
 **Step 2: Define the Vision**
 
 Using the requirements gathered, create a clear vision document.
 
+
 **Prompt:**
 ```
-Plan: Create project vision document for [project name]
-```
-
-**Example:**
-```
-Plan: Create project vision document for TaskFlow
-
-Based on requirements gathered:
-- Functional: Task CRUD, board views, real-time updates, GitHub integration, user management
-- Non-functional: <100ms response time, 99.9% uptime, GDPR compliant, mobile responsive
-- Users: Remote tech teams (5-15 people), non-technical PMs, developers
-- Constraints: 3 months, $50k, 2 developers
-
-Create vision with:
-- Problem: Existing tools too complex (Jira) or too simple (Trello) for small tech teams
-- Personas: Technical PM, Senior Developer, Junior Developer
-- Goals: 1000 active teams in 6 months, 20% conversion to paid tier
-- Scope: IN: Task management, boards, real-time, GitHub integration | OUT: Time tracking, invoicing, reporting
-- Success metrics: Daily active users, tasks created per team, retention rate
-```
-
-**Shorthand:**
-```
-@plan create a vision doc for TaskFlow using requirements: [requirements]
+@plan create a vision doc for [project name] using requirements: [requirements]
 ```
 
 
@@ -109,70 +66,12 @@ Once requirements and vision are clear, translate them into visual designs.
 
 **Prompt:**
 ```
-Design: Create clickable mockups for [project name]
-```
-
-**Example:**
-```
-Design: Create clickable mockups for TaskFlow
-
-Context:
-- Vision: docs/vision.md
-- Target users: Tech startup teams (5-15 people)
-- Key features: Task boards, real-time updates, GitHub integration
-- Design constraints: Mobile-first, WCAG AA accessibility, clean/minimal aesthetic, style guides, and color palette
-
-Deliverables:
-- Wireframes for task board, task detail, and settings
-- High-fidelity mockups with branding
-- Interactive Figma prototype
-- Basic design system (colors, fonts, button styles)
-```
-
-**Shorthand:**
-```
-@design create mockups for TaskFlow
+@design create mockups for [project name]
 ```
 
 **Step 4: Review Requirements, Vision, and Mockups Together**
 
 **Prompt:**
-```
-Plan: Review requirements, vision, and mockups for [project name]
-
-Requirements: [link to requirements doc]
-Vision: [link to vision doc]
-Mockups: [link to mockups]
-
-Validate:
-- Do all requirements have corresponding features in vision/mockups?
-- Do mockups address the core problem statement?
-- Are user needs reflected in the design?
-- Are success metrics measurable and tracked?
-- Are there any ambiguities in scope or acceptance criteria?
-- Do designs fit within constraints (technical, budget, timeline)?
-- Are there any missing requirements or edge cases?
-- Is the MVP scope realistic for the timeline?
-```
-
-**Example:**
-```
-Plan: Review requirements, vision, and mockups for TaskFlow
-
-Requirements: docs/requirements.md
-Vision: docs/vision.md
-Mockups: ui-designs/taskflow-mockups
-
-Validate:
-- All functional requirements (task CRUD, boards, real-time, GitHub integration) are in mockups
-- Non-functional requirements (performance, security, mobile) are addressed in architecture
-- Mockups solve the "too complex vs too simple" problem for target users
-- Success metrics (DAU, tasks per team, retention) are trackable
-- MVP scope (3 months, 2 devs) is realistic
-- Any gaps or risks identified
-```
-
-**Shorthand:**
 ```
 @plan review requirements, vision, and mockups for [project name] and identify any gaps
 ```
@@ -185,22 +84,6 @@ Define system architecture and technical specifications.
 
 **Prompt:**
 ```
-Architect:  Design project specifications and system architecture for [project name]
-```
-
-**Review the output:**
-```
-Architect:  Review architecture for [project name]
-
-Focus:
-- Scalability concerns
-- Security vulnerabilities
-- Cost implications
-- Technical debt risks
-```
-
-**Shorthand:**
-```
 @architect create project specs and system architecture for [project name]
 @architect build vs. buy [task name]
 ```
@@ -209,28 +92,10 @@ Focus:
 
 Convert specifications into actionable tasks in backlog.md.
 
+
 **Prompt:**
 ```
-Plan: Break down [project name] into backlog.md tasks
-```
-
-**Review tasks:**
-```
-Plan: Review backlog tasks for [project name]
-
-Tasks:
-[Reference backlog tasks]
-
-Check:
-- Are acceptance criteria testable?
-- Are dependencies correct?
-- Are estimates realistic?
-- Are there any missing tasks?
-```
-
-**Shorthand:**
-```
-@plan create all tasks for [project name] based on project spec document
+@plan create all tasks in backlog.md for [project name] based on project spec document
 @plan review all tasks for [project name] for gaps
 ```
 
@@ -249,25 +114,7 @@ Before starting the development loop, set up the foundational infrastructure and
 
 **Prompt:**
 ```
-DevOps: Scaffold core infrastructure for [project name]
-
-Architecture: docs/architecture.md
-Specifications: docs/specifications.md
-
-Set up:
-- Repository structure (monorepo/polyrepo)
-- Development environment (Docker Compose, local setup)
-- CI/CD pipeline (GitHub Actions, GitLab CI, etc.)
-- Core infrastructure as code (Terraform/CloudFormation/CDK)
-- Database migrations framework
-- Environment configuration management
-- Basic monitoring and logging
-- Deployment scripts for dev/staging/production
-```
-
-**Shorthand:**
-```
-@devops scaffold infrastructure for [project name]
+@devops scaffold infrastructure for [project name] using Architecture: docs/architecture.md and Specifications: docs/specifications.md
 ```
 
 **Review infrastructure setup:**
@@ -299,39 +146,12 @@ Before writing code, create AND review a detailed implementation plan for the ta
 
 **Prompt:**
 ```
-Plan: Create implementation plan for task #[task-id]
+@plan implementation for [task-id]
 ```
 
-**Shorthand:**
+**Prompt:**
 ```
-@plan implementation for task-5
-```
-
-**Example:**
-```
-Plan: Create implementation plan for task-5 - User registration API
-```
-
-**Review and refine the plan:**
-```
-Plan: Review implementation plan for task-5
-
-Plan:
-[Reference the implementation plan]
-
-Validate:
-- Does the approach align with architecture docs?
-- Are all edge cases considered?
-- Are security concerns addressed?
-- Is the scope appropriate (not over-engineering)?
-- Are dependencies justified?
-- Is the testing strategy comprehensive?
-- Are there any simpler alternatives?
-```
-
-**Shorthand:**
-```
-@plan review implementation plan for task-5
+@plan review implementation plan for [task-id]
 ```
 
 **Manual Human Review**
@@ -341,145 +161,61 @@ Validate:
 
 **Prompt:**
 ```
-Develop: Implement task #[task-id]
-```
-
-**Shorthand:**
-```
-@develop task-5 user login endpoint
-```
-
-**Example:**
-```
-Develop: Implement task-5 - User registration API
+@develop [task-id]
 ```
 
 ### 2.3 Review (`@review`)
 
+
 **Prompt:**
 ```
-Review: implementation of task #[task-id]
-```
-
-**Shorthand:**
-```
-@review task-5
-```
-
-**Example:**
-```
-Review: implementation of task-5
-
-Focus:
-- Security: Password hashing, email validation, SQL injection
-- Code quality: Error handling, logging, code organization
-- Acceptance criteria: All 6 criteria from task #5 met
-- Performance: Database queries optimized
-
-Files changed:
-@src/api/auth/register.ts
-@src/services/email.ts
-@src/models/user.ts
+@review [task-id]
 ```
 
 ### 2.4 Test (`@test`)
 
 **Prompt:**
 ```
-Test: Create tests for task-[task-id]
+@test [task-id]
 ```
 
-**Shorthand:**
-```
-@test task-5
-```
+---
 
-**Example:**
-```
-Test: Create tests for user registration API (task-5)
+### Self-Validating Loop with Hooks
 
-Implementation:
-@src/api/auth/register.ts
+This configuration includes an automated quality assurance loop via `.cursor/hooks/review-and-test-on-stop.sh`. When an agent completes a task, the hook automatically triggers review and testing:
 
-Test requirements:
-- Unit tests: email validation, password hashing, user creation
-- Integration tests: POST /api/auth/register endpoint
-- Edge cases: duplicate email, invalid format, weak password
-- Security: SQL injection, XSS, password exposure
+**How the self-validating loop works:**
 
-Coverage target: 90%
-```
+1. **Agent completes task** - Code changes are implemented
+2. **Hook triggers on stop** - Reads agent status (JSON) from stdin
+3. **Conditional execution** - If status is "completed" and loop_count < 1:
+   - Triggers followup message to review changes with `@review` skill
+   - Runs tests and creates new ones with `@test` skill
+   - Fixes any issues found
+4. **Loop prevention** - `loop_count` parameter prevents infinite loops (max 1 iteration)
+
+**Benefits:**
+- Automatic code review after every implementation
+- Ensures tests are created and run
+- No manual intervention required
+
+See `.cursor/hooks/review-and-test-on-stop.sh` for full implementation.
+
+---
 
 ### 2.5 Debug (`@debug`)
 
 **Prompt:**
 ```
-Debug: Investigate issue in task-[task-id]
-
-Error:
-[Paste error message or stack trace]
-```
-
-**Shorthand:**
-```
-@debug task-5 issue where registration endpoint returns 500
-```
-
-**Example:**
-```
-Debug: Investigate registration endpoint failure (task-5)
-
-Error:
-```
-Error: connect ECONNREFUSED 127.0.0.1:5432
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1148:16)
-```
-
-Context:
-- Running integration tests for POST /api/auth/register
-- Expected: 201 status with user ID
-- Actual: 500 Internal Server Error
-- Relevant files: @src/api/auth/register.ts @src/config/database.ts
-
-Environment:
-- OS: macOS 14.5
-- Node: v20.11.0
-- PostgreSQL: 15.3
+@debug [task-id] issue where [error] and [stack trace]
 ```
 
 ### 2.6 Deploy (`@devops`)
 
 **Prompt:**
 ```
-DevOps: Set up deployment for task-[task-id]
-```
-
-**Shorthand:**
-```
 @devops Set up deployment for task-[task-id]
-```
-
-**Example:**
-```
-DevOps: Deploy authentication service to staging (task-5)
-
-Infrastructure:
-- Environment: staging
-- Platform: AWS
-- Tool: Terraform
-
-Requirements:
-- ECS Fargate service for API
-- RDS PostgreSQL database
-- Application Load Balancer
-- CloudWatch logging and alarms
-- Secrets Manager for credentials
-- Auto-scaling based on CPU
-
-Context:
-- Architecture: docs/architecture/auth-service.md
-- Existing infrastructure: VPC and networking already set up
-- Follow patterns in terraform/modules/
 ```
 
 ---
@@ -515,34 +251,34 @@ Create style guides for consistent formatting.
 
 Create reusable templates for common patterns.
 
-**Directory:** `templates/`
+**Directory:** `assets/`
 
-**Example:** `templates/api-endpoint.ts`
+**Example:** `assets/api-endpoint-template.ts`
 
 
 **Reference in prompts:**
 ```
 Develop:  Create new API endpoint for user profile update
 
-Follow template in templates/api-endpoint.ts
+Follow template in templates/api-endpoint-template.ts
 ```
 
 ### 3.4 Code Examples
 
 Provide reference implementations for common patterns.
 
-**Directory:** `examples/`
+**Directory:** `references/`
 
-**Example:** `examples/repository-pattern.ts`
+**Example:** `references/repository-pattern.ts`
 
 **Reference in Agent Skills:**
 
 Edit `.cursor/skills/develop/SKILL.md`:
 ```markdown
 ## Code Patterns
-- Use repository pattern for data access (see examples/repository-pattern.ts)
-- Follow service layer pattern (see examples/service-pattern.ts)
-- Implement dependency injection (see examples/dependency-injection.ts)
+- Use repository pattern for data access (see references/repository-pattern.ts)
+- Follow service layer pattern (see references/service-pattern.ts)
+- Implement dependency injection (see references/dependency-injection.ts)
 ```
 
 ### 3.5 Reference in Skills
@@ -556,13 +292,8 @@ Edit `.cursor/skills/develop/SKILL.md`:
 Automatically references:
 - Coding standards: `docs/coding-standards.md`
 - Style guide: `docs/style-guide.md`
-- Templates: `templates/`
-- Examples: `examples/`
-```
-
-**Usage:**
-```
-@develop task-6 user profile endpoint
+- Templates: `.cursor/skills/[skill_name]/assets/`
+- Examples: `.cursor/skills/[skill_name]/references/`
 ```
 
 ---
@@ -608,17 +339,7 @@ Automatically references:
 6. @devops deploy email service to staging
 ```
 
-**Leverage project context:**
-```
-Develop:  Implement task #123
-
-Follow:
-- Coding standards in docs/coding-standards.md
-- API template in templates/api-endpoint.ts
-- Repository pattern in examples/repository-pattern.ts
-```
-
-### 4.3 Quality Gates
+### 4.3 Quality Gates and Artifacts
 
 Establish quality gates before moving to next phase or task. Plan intentionally. Leave good, useful artifacts as development continues:
 
@@ -626,7 +347,7 @@ Establish quality gates before moving to next phase or task. Plan intentionally.
 - [ ] All acceptance criteria met
 - [ ] Code follows standards in docs/coding-standards.md
 - [ ] No linter errors
-- [ ] Manual testing completed
+- [ ] Testing completed
 
 **After Review:**
 - [ ] Review Agent approved
@@ -637,29 +358,16 @@ Establish quality gates before moving to next phase or task. Plan intentionally.
 **After Testing:**
 - [ ] Unit tests passing
 - [ ] Integration tests passing
-- [ ] Coverage meets threshold (80%+)
+- [ ] Coverage meets threshold
 - [ ] Edge cases covered
-
-**After Debugging:**
-- [ ] Root cause identified
-- [ ] Fix implemented
-- [ ] Regression test added
-- [ ] Similar issues checked
-
-**Before Deployment:**
-- [ ] All tests passing
-- [ ] Security scan clean
-- [ ] Environment variables configured
-- [ ] Monitoring and alerts set up
-- [ ] Rollback plan documented
 
 ### 4.5 Continuous Improvement
 
 **Update project context:**
 As patterns emerge, document them:
 ```bash
-# Add new pattern to examples
-echo "// New pattern discovered" > examples/new-pattern.ts
+# Add new pattern to references
+echo "// New pattern discovered" > references/new-pattern.ts
 
 # Update coding standards
 # Edit docs/coding-standards.md
@@ -687,7 +395,6 @@ Track which prompts work best and update agent skills in `.cursor/skills/`.
 @debug [issue]
 @devops [infrastructure]
 ```
-
 
 ### Skill Sequence for Each Task
 1. `@plan` → Plan implementation & review plan
